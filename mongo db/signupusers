@@ -1,0 +1,182 @@
+[{
+  "_id": {
+    "$oid": "649566ad76c01b995a20e83d"
+  },
+  "email": "deep485386@gmail.com",
+  "password": "$2a$10$LoeTzbU234wbBOzMqUUlGOX81KENogVBrLRSsAPTHHMKhebAu40rC",
+  "__v": 0,
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691211351474"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6495837276c01b995a20e8ab"
+  },
+  "email": "bhargav@gmail.com",
+  "password": "$2b$10$hAcHSrZhLqf2R1xJaqNkj.6mBZOP73j5a6CuyWfJU1w1JLT3ywqAi",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "649adf3660c9f338191bccb0"
+  },
+  "email": "sohit@gmail.com",
+  "password": "$2a$10$ztp7dKYk9B0bTKgb542BtugUsCXNsP/VCLpbYaGWi5fpRzi/30zyO",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a64c860074484fcd607c09"
+  },
+  "email": "maitri@gmail.com",
+  "password": "$2a$10$oeoTRwFks65DOFJOpeeB9ubJgvlwSnpOlKAnWigMD.NoPeaiAPsAW",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a659ed02909d1a3e1ae072"
+  },
+  "email": "sibten@gmail.com",
+  "password": "$2a$10$g35MMar44HgRr/hvj7VIdeCeADgyH.pgQlVTzUjVRr5LNwVEKKyru",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a65bb4e49cff362f07b06b"
+  },
+  "email": "dev@gmail.com",
+  "password": "$2a$10$WcDaysSsG48/SLclqylJ4.e6RUiYOaWEeMOZdM5.mZzJcEwc3F0xS",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a665bbf59b214c29c9e00d"
+  },
+  "email": "abhishek@gmail.com",
+  "password": "$2a$10$mHNdqGdHMU8KjtS/yqsmFuOo3urhndekCgf45B8ey1Q3/TZGK/f9m",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a66637f59b214c29c9e042"
+  },
+  "email": "harsh@gmail.com",
+  "password": "$2a$10$/u4oQhCI6.W/ryabRMhY4usFZxZPOyEo5DKgLI.oeuV9zoUy9814u",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a666bef59b214c29c9e084"
+  },
+  "email": "nirali@gmail.com",
+  "password": "$2a$10$Wjxa81UPlZB0IZ3ExR/Z/OuMFBvcVpvBKkM0srfW8d5MHbrtmh2S6",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a68b17cf561d5075a8b7f1"
+  },
+  "email": "kashish@gmail.com",
+  "password": "$2a$10$xISCFxneKxnJvPouMrf5beYiKbRk74B6VmihpBAZjFb9bHytOzdYK",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a693e67e6ee90f12f05ff3"
+  },
+  "email": "vikas@gmail.com",
+  "password": "$2a$10$HOsKSqidOJciqENVC07bq.OJEpHlHQ0P1TNo5f5WBIGVeYBFjRVU2",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a694af4b982f868eb32cd7"
+  },
+  "email": "rahul@gmail.com",
+  "password": "$2a$10$OLRAqIJupg5lE0jOKSJ3tunGpLTZHEqx2jW72tX6IV75z.kjfF5Km",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a695e34b982f868eb32e34"
+  },
+  "email": "aneri@gmail.com",
+  "password": "$2a$10$KKqsjpamgKMh01IuPpF6e.mEnqUuJlEn9G3NXoWXYG6un2OLcln.a",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64cb71284b8d37fe57baf692"
+  },
+  "email": "testuser02002@gmail.com",
+  "password": "$2a$10$wUkpEHpXyKGVjePRzhM7puB6h1X/J8e1pzq5vtXiE5tlGMr6biv3y",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691054376215"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691054376215"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64cc7c7c36a42883b46ef0dc"
+  },
+  "email": "sufiyanmalek.geek@gmail.com",
+  "password": "$2a$10$DAINBr1ZECgv29sZ7nPHKOPBIE7eu1SrlGAG34EqIW28hkxN2zbn2",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691122812505"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691122812505"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64ccb5c9422ccbb601943ae9"
+  },
+  "email": "vasubhimani99099@gmail.com",
+  "password": "$2a$10$tiiUTL4pz7i7Np/ykmkZl.ACOhzOuwK00d2HkZkCcC4mk/cfZkRDy",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691137481613"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691137481613"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64ccc3bf422ccbb6019460c0"
+  },
+  "email": "sampatharshit03@gmail.com",
+  "password": "$2a$10$8RblrEXeg72CHZPh15v7g.Q4VlBanQRqUHmRo7t04zpmXw115trEi",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691141055770"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691218008434"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64d0bf31c7f7433e0829fbc5"
+  },
+  "email": "modibhargav1998@gmail.com",
+  "password": "$2a$10$BxMBlkIAix/tircaVlFMVukZoFbiiVPi3ovkaOl8zli3/CdVxDsBC",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691402033818"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691402033818"
+    }
+  },
+  "__v": 0
+}]

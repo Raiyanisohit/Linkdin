@@ -1,0 +1,287 @@
+[{
+  "_id": {
+    "$oid": "64c11fbb6597708f6a1ce2fa"
+  },
+  "requestUserId": {
+    "$oid": "649566ad76c01b995a20e83f"
+  },
+  "userId": {
+    "$oid": "64a64c860074484fcd607c0b"
+  },
+  "requestStatus": "Success",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1690378171527"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1690378229484"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64c11ff56597708f6a1ce4f6"
+  },
+  "requestUserId": {
+    "$oid": "64a64c860074484fcd607c0b"
+  },
+  "userId": {
+    "$oid": "649566ad76c01b995a20e83f"
+  },
+  "requestStatus": "Success",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1690378229488"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1690378229488"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64c3456c7a30a1082804aeda"
+  },
+  "requestUserId": {
+    "$oid": "6495837276c01b995a20e8ad"
+  },
+  "userId": {
+    "$oid": "64a64c860074484fcd607c0b"
+  },
+  "requestStatus": "Success",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1690518892906"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1690518900495"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64c345747a30a1082804aeec"
+  },
+  "requestUserId": {
+    "$oid": "64a64c860074484fcd607c0b"
+  },
+  "userId": {
+    "$oid": "6495837276c01b995a20e8ad"
+  },
+  "requestStatus": "Success",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1690518900529"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1690518900529"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64cb78f35611984470f3591b"
+  },
+  "requestUserId": {
+    "$oid": "64cb71284b8d37fe57baf694"
+  },
+  "userId": {
+    "$oid": "649adf3660c9f338191bccb2"
+  },
+  "requestStatus": "Success",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691056371214"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691056387099"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64cb79035611984470f359e9"
+  },
+  "requestUserId": {
+    "$oid": "649adf3660c9f338191bccb2"
+  },
+  "userId": {
+    "$oid": "64cb71284b8d37fe57baf694"
+  },
+  "requestStatus": "Success",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691056387115"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691056387115"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64cba73ec2561842dcbde68a"
+  },
+  "requestUserId": {
+    "$oid": "649566ad76c01b995a20e83f"
+  },
+  "userId": {
+    "$oid": "64a659ed02909d1a3e1ae074"
+  },
+  "requestStatus": "Success",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691068222350"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691068298186"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64cba78ac2561842dcbde76c"
+  },
+  "requestUserId": {
+    "$oid": "64a659ed02909d1a3e1ae074"
+  },
+  "userId": {
+    "$oid": "649566ad76c01b995a20e83f"
+  },
+  "requestStatus": "Success",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691068298194"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691068298194"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64cc87ad36a42883b46f1907"
+  },
+  "requestUserId": {
+    "$oid": "6495837276c01b995a20e8ad"
+  },
+  "userId": {
+    "$oid": "649566ad76c01b995a20e83f"
+  },
+  "requestStatus": "Success",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691125677204"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691125681565"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64cc87b136a42883b46f1918"
+  },
+  "requestUserId": {
+    "$oid": "649566ad76c01b995a20e83f"
+  },
+  "userId": {
+    "$oid": "6495837276c01b995a20e8ad"
+  },
+  "requestStatus": "Success",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691125681588"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691125681588"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64ccc6a0422ccbb601946436"
+  },
+  "requestUserId": {
+    "$oid": "64ccc3bf422ccbb6019460c2"
+  },
+  "userId": {
+    "$oid": "649566ad76c01b995a20e83f"
+  },
+  "requestStatus": "Success",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691141792696"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691141810345"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64ccc6b2422ccbb601946447"
+  },
+  "requestUserId": {
+    "$oid": "649566ad76c01b995a20e83f"
+  },
+  "userId": {
+    "$oid": "64ccc3bf422ccbb6019460c2"
+  },
+  "requestStatus": "Success",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691141810348"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691141810348"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64d1e4b78a4d0358885a4e41"
+  },
+  "requestUserId": {
+    "$oid": "649566ad76c01b995a20e83f"
+  },
+  "userId": {
+    "$oid": "649adf3660c9f338191bccb2"
+  },
+  "requestStatus": "Pending",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691477175403"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691477175403"
+    }
+  },
+  "__v": 0
+}]

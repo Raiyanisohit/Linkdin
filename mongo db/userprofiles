@@ -1,0 +1,790 @@
+[{
+  "_id": {
+    "$oid": "649566ad76c01b995a20e83f"
+  },
+  "email": "deep485386@gmail.com",
+  "firstName": "Deep",
+  "lastName": "Patel",
+  "experience": [
+    {
+      "companyName": "Radixweb",
+      "employementType": "Full-time",
+      "jobTitle": "Trainee Software Engineer",
+      "location": "Charodi Ahmedabad",
+      "locationType": "On-site",
+      "startYear": 2023,
+      "startMonth": "Feb",
+      "endMonth": "",
+      "endYear": 0
+    },
+    {
+      "companyName": "Elsner Privete Limited",
+      "employementType": "Internship",
+      "jobTitle": "React Developer",
+      "location": "Ifcoo Bhavan, Satellite",
+      "locationType": "On-site",
+      "startYear": 2022,
+      "startMonth": "March",
+      "endMonth": "March",
+      "endYear": 2022
+    },
+    {
+      "companyName": "Microsoft",
+      "employementType": "Full-time",
+      "jobTitle": "Software Developer",
+      "location": "Banglore",
+      "locationType": "On-site",
+      "startYear": 2023,
+      "startMonth": "June",
+      "endMonth": "",
+      "endYear": 0
+    }
+  ],
+  "education": [
+    {
+      "instituteName": "Saffrony Institute of Technology",
+      "degree": "Bechloe of Engineering",
+      "studyField": "Computer",
+      "startYear": 2019,
+      "startMonth": "June",
+      "descprition": "Great Learning Experience",
+      "endYear": 2023,
+      "endMonth": "January"
+    },
+    {
+      "instituteName": "D.A. Patel Technical Highschool",
+      "degree": "SSC",
+      "studyField": "",
+      "startYear": 2015,
+      "startMonth": "June",
+      "descprition": "",
+      "endYear": 2017,
+      "endMonth": "April",
+      "grade": ""
+    },
+    {
+      "instituteName": "Serva Vidhyalaya High-school",
+      "degree": "SSC",
+      "studyField": "Science",
+      "startYear": 2017,
+      "startMonth": "June",
+      "descprition": "",
+      "endYear": 2019,
+      "endMonth": "April",
+      "grade": ""
+    }
+  ],
+  "projects": [
+    {
+      "projectName": "Informatics on Irrigation System",
+      "description": "In the website we are focusing on the weather forecast and crop suggestions. In the website we add some area for the weather forecast and in the weather forecast user can see the weather of current day, current month and next two months. Using weather forecast farmers can easily decide to which crop is best for future and also for the choose perfect crop we add crop suggestions section also. \nAs per the user's selection we also suggest irrigation system also and for the implementation of irrigation system we add video section for more information.\n\nOur main aim is to get batter crop production with technology and less effort.",
+      "projectStartMonth": "June",
+      "projectStartYear": 2020,
+      "projectEndMonth": "January",
+      "projectEndYear": 2021
+    },
+    {
+      "projectName": "Folab",
+      "description": "Online appointment booking site",
+      "projectStartMonth": "February",
+      "projectStartYear": 2022,
+      "projectEndMonth": "",
+      "projectEndYear": 0
+    },
+    {
+      "projectName": "Candihire",
+      "description": "Site to manage hiring process efficiently",
+      "projectStartMonth": "February",
+      "projectStartYear": 2023,
+      "projectEndMonth": "March",
+      "projectEndYear": 2023,
+      "projectLink": "https://deep-candihire.netlify.app/"
+    }
+  ],
+  "skills": [
+    "Web Developer",
+    "React",
+    "Java Script",
+    "Node",
+    "Express",
+    "Communication",
+    "TypeScript",
+    "BackEnd Developer",
+    "Koa",
+    "NextJs",
+    "HTMl",
+    "test skill"
+  ],
+  "industry": "MERN stack developer",
+  "country": "India",
+  "city": "Ahmedababad",
+  "__v": 0,
+  "userImage": "https://deepdemobucket.s3.ap-south-1.amazonaws.com/deepImage.jpeg",
+  "userAbout": "Excellent in programming languages like ReactJs, Node, NextJs, koa, javaScript, typeScript, HTML, CSS, TailwindCSS. \n\nI was completed total 4 small and big projects from one project in HTML and CSS, another one in React and backend in firebase and one small and one forum type project in PHP and currently work on one big project in react and node to make a clone of linkedIn. \n\nAlso my team was the selected in manthan hackathon organized by Indian defence ministry and in that competition my team was runner-up and the project was based on ML and pythone. ",
+  "profileHeadline": "Trainee Software Engineer at Radixweb",
+  "LicenceAndCertificate": [
+    {
+      "certificateName": "Class B Electrician",
+      "organizationName": "Hello technologies",
+      "issueDateMonth": "January",
+      "issueDateYear": 2023,
+      "expiryDateMonth": "December",
+      "expiryDateYear": 2030
+    },
+    {
+      "certificateName": "Class A",
+      "organizationName": "National cadet cops",
+      "issueDateMonth": "June",
+      "issueDateYear": 2010,
+      "expiryDateMonth": "",
+      "expiryDateYear": null
+    },
+    {
+      "certificateName": "test",
+      "organizationName": "test",
+      "issueDateMonth": "February",
+      "issueDateYear": 2023,
+      "expiryDateMonth": "January",
+      "expiryDateYear": 2024
+    }
+  ],
+  "Publication": [
+    {
+      "title": "Hello world",
+      "publication": "Test publication",
+      "publicationDateMonth": "January",
+      "publicationDateYear": 2023,
+      "publicationURL": "https://cdn-icons-png.flaticon.com/128/2961/2961937.png",
+      "description": "Some text for pblication"
+    },
+    {
+      "title": "test publication",
+      "publication": "Test publication",
+      "publicationDateMonth": "February",
+      "publicationDateYear": 2023,
+      "publicationURL": "",
+      "description": ""
+    }
+  ],
+  "HonorsAndAwards": [
+    {
+      "titel": "Award_1",
+      "associateWith": "Dev technologies",
+      "issuer": "Dev technologies",
+      "issueDateMonth": "January",
+      "issueDateYear": 2022,
+      "description": "Award_1 goes to Mr. Deep Patel"
+    },
+    {
+      "titel": "Award_2",
+      "associateWith": "Dev technologies",
+      "issuer": "Dev technologies",
+      "issueDateMonth": "January",
+      "issueDateYear": 2022,
+      "description": "Award_2 goes to Mr. Deep Patel"
+    },
+    {
+      "titel": "Employee of the month",
+      "associateWith": "Radixweb",
+      "issuer": "RadixWeb",
+      "issueDateMonth": "August",
+      "issueDateYear": 2023,
+      "description": "Good in project task and really nice project..!!"
+    },
+    {
+      "titel": "Test Award_1",
+      "associateWith": "Saffrony Institute of Technology",
+      "issuer": "Saffrony institute of technology",
+      "issueDateMonth": "February",
+      "issueDateYear": 2023,
+      "description": ""
+    }
+  ],
+  "Courses": [
+    {
+      "courceName": "Cource_1",
+      "number": "07",
+      "associatewith": "Dev technologies"
+    },
+    {
+      "courceName": "Computer Network",
+      "number": "CN-3150710",
+      "associatewith": "Saffrony Institute of Technology"
+    },
+    {
+      "courceName": "CS-50",
+      "number": "",
+      "associatewith": "Radixweb"
+    }
+  ],
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691482269854"
+    }
+  },
+  "backgroundImage": "https://deepdemobucket.s3.ap-south-1.amazonaws.com/bg4.webp",
+  "Languages": [
+    {
+      "language": "Gujrati",
+      "languageProficiency": "Full professional proficiency"
+    },
+    {
+      "language": "Hindi",
+      "languageProficiency": "Limited working proficiency"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6495837276c01b995a20e8ad"
+  },
+  "email": "bhargav@gmail.com",
+  "firstName": "Bhargav",
+  "lastName": "Patel",
+  "experience": [
+    {
+      "companyName": "Radixweb Software Private Limited",
+      "employementType": "Trainee Software Engineer",
+      "jobTitle": "Full Stack Developer: (Python, React)",
+      "location": "Charodi",
+      "locationType": "On-site",
+      "startYear": 2022,
+      "startMonth": "Febuary",
+      "endMonth": "",
+      "endYear": 0
+    }
+  ],
+  "education": [
+    {
+      "instituteName": "Saffrony Institute of technology",
+      "degree": "B.E.",
+      "studyField": "Computer",
+      "startYear": 2019,
+      "startMonth": "July",
+      "descprition": "",
+      "endYear": 2023,
+      "endMonth": "April",
+      "grade": ""
+    }
+  ],
+  "projects": [
+    {
+      "projectName": "Main sender",
+      "description": "A mechanism to send a mail in which we will just have to provide the excel file with some data and create one format according to need and we are able to send mail to all given email available in excel!! ",
+      "projectStartMonth": "December",
+      "projectStartYear": 2021,
+      "projectEndMonth": "February",
+      "projectEndYear": 2022,
+      "projectLink": ""
+    }
+  ],
+  "skills": [],
+  "industry": "",
+  "country": "India",
+  "city": "Surat",
+  "__v": 0,
+  "userImage": "https://deepdemobucket.s3.ap-south-1.amazonaws.com/bDin.jpeg",
+  "userAbout": "In the website we are focusing on the weather forecast and crop suggestions. In the website we add some area for the weather forecast and in the weather forecast user can see the weather of current day, current month and next two months. Using weather forecast farmers can easily decide to which crop is best for future and also for the choose perfect crop we add crop suggestions section also.\nAs per the user's selection we also suggest irrigation system also and for the implementation of irrigation system we add video section for more information.\nOur main aim is to get batter crop production with technology and less effort.",
+  "backgroundImage": "https://deepdemobucket.s3.ap-south-1.amazonaws.com/bBg.jpeg",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691058119392"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "649adf3660c9f338191bccb2"
+  },
+  "email": "sohit@gmail.com",
+  "firstName": "Sohit",
+  "lastName": "Raiyani",
+  "experience": [
+    {
+      "companyName": "Radix",
+      "employementType": "Full-time",
+      "jobTitle": "Software Developer",
+      "location": "Ahemdabd",
+      "locationType": "On-site",
+      "startYear": 2023,
+      "startMonth": "February",
+      "endMonth": "",
+      "endYear": 0
+    },
+    {
+      "companyName": "Radixweb",
+      "employementType": "Full-time",
+      "jobTitle": "Software Developer",
+      "location": "Ahemdabd",
+      "locationType": "On-site",
+      "startYear": 2016,
+      "startMonth": "March",
+      "endMonth": "",
+      "endYear": 0
+    }
+  ],
+  "education": [
+    {
+      "instituteName": "GEC Bhavnagar",
+      "degree": "B.E",
+      "studyField": "Computer Science",
+      "startYear": 2019,
+      "startMonth": "July",
+      "descprition": "",
+      "endYear": 2023,
+      "endMonth": "April",
+      "grade": "B+"
+    },
+    {
+      "instituteName": "",
+      "degree": "",
+      "studyField": "",
+      "startYear": null,
+      "startMonth": "",
+      "descprition": "",
+      "endYear": null,
+      "endMonth": "",
+      "grade": ""
+    }
+  ],
+  "projects": [],
+  "skills": [
+    "Html",
+    "React js",
+    "Vue js"
+  ],
+  "industry": "Software Developer",
+  "country": "India",
+  "city": "Ahemdabd",
+  "__v": 0,
+  "userImage": "https://deepdemobucket.s3.ap-south-1.amazonaws.com/pxfuel (3).jpg",
+  "userAbout": "B.E in Information Technology from SHANTILAL SHAH ENGINEERING COLLEGE BHAVNAGAR 043, \n",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691475474908"
+    }
+  },
+  "backgroundImage": "https://deepdemobucket.s3.ap-south-1.amazonaws.com/bg3.jpeg"
+},{
+  "_id": {
+    "$oid": "64a64c860074484fcd607c0b"
+  },
+  "email": "maitri@gmail.com",
+  "firstName": "Maitri",
+  "lastName": "Trivedi",
+  "userImage": "https://cdn-icons-png.flaticon.com/128/149/149071.png",
+  "industry": "Back-end developer",
+  "country": "India",
+  "city": "Ahmedababad",
+  "__v": 0,
+  "experience": [
+    {
+      "companyName": "Yudiz Solutions",
+      "employementType": "Full-time",
+      "jobTitle": "Backend Developer",
+      "location": "Iscon",
+      "locationType": "On-site",
+      "startYear": 2023,
+      "startMonth": "February",
+      "endMonth": "",
+      "endYear": 0
+    },
+    {
+      "companyName": "Elcner Technology",
+      "employementType": "Internship",
+      "jobTitle": "React Developer",
+      "location": "Ifcoo Bhavan",
+      "locationType": "On-site",
+      "startYear": 2022,
+      "startMonth": "April",
+      "endMonth": "April",
+      "endYear": 2022
+    }
+  ],
+  "userAbout": "Some thing in my about",
+  "profileHeadline": "Backend Developer at Yudiz Solutions",
+  "Languages": [
+    {
+      "language": "Gujrati",
+      "languageProficiency": "Full professional proficiency"
+    }
+  ],
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691057580828"
+    }
+  },
+  "backgroundImage": "https://deepdemobucket.s3.ap-south-1.amazonaws.com/mBg.jpeg"
+},{
+  "_id": {
+    "$oid": "64a659ed02909d1a3e1ae074"
+  },
+  "email": "sibten@gmail.com",
+  "firstName": "Sibten",
+  "lastName": "Sekh",
+  "userImage": "https://cdn-icons-png.flaticon.com/128/149/149071.png",
+  "industry": "MERN stack developer",
+  "country": "United States",
+  "city": "Los Angeles",
+  "__v": 0,
+  "userAbout": "This is something about me",
+  "experience": [
+    {
+      "companyName": "Radixweb",
+      "employementType": "Full-time",
+      "jobTitle": "Trainee Software Engineer",
+      "location": "Charodi",
+      "locationType": "On-site",
+      "startYear": 2023,
+      "startMonth": "February",
+      "endMonth": "",
+      "endYear": 0
+    }
+  ],
+  "education": [
+    {
+      "instituteName": "Goverment Engineering College, Patan",
+      "degree": "BE ",
+      "studyField": "Computer Science",
+      "startYear": 2019,
+      "startMonth": "July",
+      "descprition": "",
+      "endYear": 2023,
+      "endMonth": "April",
+      "grade": ""
+    }
+  ],
+  "projects": [
+    {
+      "projectName": "Candi-Hire",
+      "description": "A site to handle interview process and make process fast and efficient",
+      "projectStartMonth": "March",
+      "projectStartYear": 2023,
+      "projectEndMonth": "April",
+      "projectEndYear": 2023,
+      "projectLink": ""
+    }
+  ],
+  "skills": [
+    "Node Js",
+    "React Js",
+    "TypeScript",
+    "JavaScript"
+  ]
+},{
+  "_id": {
+    "$oid": "64a65bb4e49cff362f07b06d"
+  },
+  "email": "dev@gmail.com",
+  "firstName": "Dev",
+  "lastName": "Patel",
+  "userImage": "https://cdn-icons-png.flaticon.com/128/149/149071.png",
+  "industry": "",
+  "country": "India",
+  "city": "Bengaluru",
+  "__v": 0,
+  "education": [
+    {
+      "instituteName": "Saffrony Institute of technology",
+      "degree": "B.E",
+      "studyField": "Computer Science",
+      "startYear": 2019,
+      "startMonth": "July",
+      "descprition": "",
+      "endYear": 2023,
+      "endMonth": "April",
+      "grade": "A"
+    }
+  ],
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1690365854322"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64a665bbf59b214c29c9e00f"
+  },
+  "email": "abhishek@gmail.com",
+  "firstName": "Abhishek",
+  "lastName": "Patel",
+  "userImage": "https://cdn-icons-png.flaticon.com/128/149/149071.png",
+  "industry": "Web Developer",
+  "country": "India",
+  "city": "Mumbai",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a66637f59b214c29c9e044"
+  },
+  "email": "harsh@gmail.com",
+  "firstName": "Harsh",
+  "lastName": "Gajjar",
+  "userImage": "https://cdn-icons-png.flaticon.com/128/149/149071.png",
+  "industry": "Jr. Software Engineer ",
+  "country": "India",
+  "city": "Pune",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a666bef59b214c29c9e086"
+  },
+  "email": "nirali@gmail.com",
+  "firstName": "Nirali",
+  "lastName": "Patel",
+  "userImage": "https://cdn-icons-png.flaticon.com/128/149/149071.png",
+  "industry": "",
+  "country": "United States",
+  "city": "New York",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a68b17cf561d5075a8b7f3"
+  },
+  "email": "kashish@gmail.com",
+  "firstName": "Kashish",
+  "lastName": "Chopra",
+  "userImage": "https://cdn-icons-png.flaticon.com/128/149/149071.png",
+  "industry": "",
+  "country": "India",
+  "city": "Ahmedababad",
+  "__v": 0,
+  "skills": [
+    "Html",
+    "css",
+    "js",
+    "jquery",
+    "gh",
+    "gh"
+  ]
+},{
+  "_id": {
+    "$oid": "64a693e67e6ee90f12f05ff5"
+  },
+  "email": "vikas@gmail.com",
+  "firstName": "Vikas",
+  "lastName": "Sonwane",
+  "userImage": "https://deepdemobucket.s3.ap-south-1.amazonaws.com/vikasProfile.jpeg",
+  "industry": "",
+  "country": "Canada",
+  "city": "Vancouver",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a694af4b982f868eb32cd9"
+  },
+  "email": "rahul@gmail.com",
+  "firstName": "Rahul",
+  "lastName": "singh",
+  "userImage": "https://cdn-icons-png.flaticon.com/128/149/149071.png",
+  "industry": "sd",
+  "country": "India",
+  "city": "Ahmedababad",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a695e34b982f868eb32e36"
+  },
+  "email": "aneri@gmail.com",
+  "firstName": "Aneri",
+  "lastName": "Patel",
+  "userImage": "https://cdn-icons-png.flaticon.com/128/149/149071.png",
+  "industry": "Trainee Software Engineer",
+  "country": "United States",
+  "city": "New York",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64cb71284b8d37fe57baf694"
+  },
+  "email": "testuser02002@gmail.com",
+  "firstName": "Test",
+  "lastName": "User",
+  "userImage": "https://cdn-icons-png.flaticon.com/128/149/149071.png",
+  "industry": "Software Engineer",
+  "country": "India",
+  "city": "Ahmedababad",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691054376224"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691056913141"
+    }
+  },
+  "__v": 0,
+  "education": [
+    {
+      "instituteName": "Saffrony",
+      "startYear": 2019,
+      "startMonth": "August",
+      "endYear": 2023,
+      "endMonth": "April"
+    }
+  ],
+  "profileHeadline": "Test Software Engineer",
+  "backgroundImage": "https://deepdemobucket.s3.ap-south-1.amazonaws.com/testBg.jpeg",
+  "userAbout": "This is about Test User"
+},{
+  "_id": {
+    "$oid": "64cc7c7c36a42883b46ef0de"
+  },
+  "email": "sufiyanmalek.geek@gmail.com",
+  "firstName": "Sufiyan",
+  "lastName": "Malek",
+  "userImage": "https://cdn-icons-png.flaticon.com/128/149/149071.png",
+  "industry": "Graduate Trainee",
+  "country": "India",
+  "city": "Ahmedababad",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691122812516"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691122841564"
+    }
+  },
+  "__v": 0,
+  "experience": [
+    {
+      "companyName": "Radix",
+      "employementType": "Full-time",
+      "jobTitle": "Graduate Trainee",
+      "startYear": 2023,
+      "startMonth": "February",
+      "endMonth": "",
+      "endYear": null
+    }
+  ],
+  "skills": [
+    "C++"
+  ]
+},{
+  "_id": {
+    "$oid": "64ccb5c9422ccbb601943aeb"
+  },
+  "email": "vasubhimani99099@gmail.com",
+  "firstName": "vasu",
+  "lastName": "bhimani",
+  "userImage": "https://deepdemobucket.s3.ap-south-1.amazonaws.com/jpg.jpg",
+  "industry": "   ",
+  "country": "India",
+  "city": "Ahmedababad",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691137481624"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691138028579"
+    }
+  },
+  "__v": 0,
+  "experience": [
+    {
+      "companyName": "Radixweb",
+      "employementType": "Full-time",
+      "jobTitle": "   ",
+      "startYear": 2023,
+      "startMonth": "January",
+      "endMonth": "def",
+      "endYear": null
+    }
+  ],
+  "projects": [
+    {
+      "projectName": "sfsdfsdf",
+      "description": "",
+      "projectStartMonth": "September",
+      "projectStartYear": 2009,
+      "projectLink": "",
+      "projectEndMonth": "",
+      "projectEndYear": 0
+    }
+  ],
+  "skills": [
+    "Node"
+  ],
+  "backgroundImage": "https://deepdemobucket.s3.ap-south-1.amazonaws.com/Screenshot from 2023-08-01 15-36-29.png"
+},{
+  "_id": {
+    "$oid": "64ccc3bf422ccbb6019460c2"
+  },
+  "email": "sampatharshit03@gmail.com",
+  "firstName": "Harshit",
+  "lastName": "Sampat",
+  "userImage": "https://cdn-icons-png.flaticon.com/128/149/149071.png",
+  "industry": "Software developer",
+  "country": "India",
+  "city": "Ahmedababad",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691141055779"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691145385112"
+    }
+  },
+  "__v": 0,
+  "experience": [
+    {
+      "companyName": "Radixweb",
+      "employementType": "Full-time",
+      "jobTitle": "Software developer",
+      "startYear": 2023,
+      "startMonth": "February",
+      "endMonth": "",
+      "endYear": null
+    }
+  ],
+  "backgroundImage": "https://deepdemobucket.s3.ap-south-1.amazonaws.com/bBg.jpeg",
+  "education": [
+    {
+      "instituteName": "saffrony institute of technology ",
+      "degree": "B.E",
+      "studyField": "Computer",
+      "startYear": 2019,
+      "startMonth": "July",
+      "descprition": "",
+      "endYear": 2023,
+      "endMonth": "April",
+      "grade": ""
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "64d0bf31c7f7433e0829fbc7"
+  },
+  "email": "modibhargav1998@gmail.com",
+  "firstName": "Bhargav",
+  "lastName": "modi",
+  "userImage": "https://deepdemobucket.s3.ap-south-1.amazonaws.com/pxfuel (1).jpg",
+  "industry": "",
+  "country": "india",
+  "city": "Ahemdabd",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691402033831"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691402676062"
+    }
+  },
+  "__v": 0,
+  "education": [
+    {
+      "instituteName": "patan goverment college",
+      "startYear": 2015,
+      "startMonth": "March",
+      "endYear": 2018,
+      "endMonth": "May"
+    }
+  ]
+}]

@@ -1,0 +1,262 @@
+[{
+  "_id": {
+    "$oid": "64951ff0068ab74f76266e6c"
+  },
+  "email": "deep@gmail.com",
+  "OTP": "884262",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64956a4976c01b995a20e85e"
+  },
+  "email": "sohit@gmail.com",
+  "OTP": "385801",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6495836576c01b995a20e8a8"
+  },
+  "email": "bhargav@gmail.com",
+  "OTP": "341037",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a649930074484fcd607bfd"
+  },
+  "email": "maitri@gmail.com",
+  "OTP": "523581",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a659dc02909d1a3e1ae06f"
+  },
+  "email": "sibten@gmail.com",
+  "OTP": "496593",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a65ba7e49cff362f07b068"
+  },
+  "email": "dev@gmail.com",
+  "OTP": "192027",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a665acf59b214c29c9e00a"
+  },
+  "email": "abhishek@gmail.com",
+  "OTP": "207656",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a66628f59b214c29c9e03f"
+  },
+  "email": "harsh@gmail.com",
+  "OTP": "260302",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a666b2f59b214c29c9e081"
+  },
+  "email": "nirali@gmail.com",
+  "OTP": "294115",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a68b08cf561d5075a8b7ee"
+  },
+  "email": "kashish@gmail.com",
+  "OTP": "640731",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a693d17e6ee90f12f05ff0"
+  },
+  "email": "vikas@gmail.com",
+  "OTP": "971660",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a6949d4b982f868eb32cd4"
+  },
+  "email": "rahul@gmail.com",
+  "OTP": "708905",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a695cd4b982f868eb32e30"
+  },
+  "email": "aneri@gmail.com",
+  "OTP": "897925",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64cb71054b8d37fe57baf68f"
+  },
+  "email": "testuser02002@gmail.com",
+  "OTP": "170614",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691054341805"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691054341805"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64cc7c4c36a42883b46ef0d9"
+  },
+  "email": "sufiyanmalek.geek@gmail.com",
+  "OTP": "304691",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691122764829"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691122764829"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64ccb59c422ccbb601943ae6"
+  },
+  "email": "vasubhimani99099@gmail.com",
+  "OTP": "828160",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691137436737"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691137436737"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64ccc38a422ccbb6019460bd"
+  },
+  "email": "sampatharshit03@gmail.com",
+  "OTP": "229112",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691141002343"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691141002343"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64cdf451ab3965fa5a823f6a"
+  },
+  "email": "deep485386@gmail.com",
+  "OTP": "668398",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691219027656"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691219027656"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64ce35e5ae29616bfb550075"
+  },
+  "email": "deep123@gmail.com",
+  "OTP": "224165",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691235815473"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691235815473"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64ce3a4cbb1b5839575ddb6c"
+  },
+  "email": "deep455165772@gmail.com",
+  "OTP": "185389",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691236943518"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691237171204"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64d075524cb8e16c128fb920"
+  },
+  "email": "milan@gmail.com",
+  "OTP": "369747",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691383122698"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691384460969"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64d097bfc7f7433e0829f29b"
+  },
+  "email": "urvin@gmail.com",
+  "OTP": "165256",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691391935437"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691392708016"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64d0bef2c7f7433e0829fbc1"
+  },
+  "email": "modibhargav1998@gmail.com",
+  "OTP": "282760",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691401970953"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691401970953"
+    }
+  },
+  "__v": 0
+}]

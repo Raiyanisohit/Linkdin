@@ -1,0 +1,78 @@
+[{
+  "_id": {
+    "$oid": "64968fae5540c82c6e4c2bb0"
+  },
+  "email": "deep@gmail.com",
+  "OTP": "683731",
+  "__v": 0,
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691217613058"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64969514b41bbcb8935a0ce8"
+  },
+  "email": "deep1@gmail.com",
+  "OTP": "856",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64b150414dedbf41228089dc"
+  },
+  "email": "rahul@gmail.com",
+  "OTP": "288433",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64cdf0301bab0fdb059683d5"
+  },
+  "email": "sampatharshit03@gmail.com",
+  "OTP": "600417",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691217970459"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691217970459"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64cdf0a01bab0fdb059683dd"
+  },
+  "email": "testuser02002@gmail.com",
+  "OTP": "793941",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691218082373"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691469840647"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64ce1bd7d3aa51a802b9ba10"
+  },
+  "email": "deep485386@gmail.com",
+  "OTP": "663992",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1691229146663"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1691469908641"
+    }
+  },
+  "__v": 0
+}]
