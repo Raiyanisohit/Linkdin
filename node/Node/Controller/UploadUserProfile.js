@@ -28,9 +28,10 @@ export const uploadUserProfile = async (req, res) => {
                 })
 
                 try {
-                    await client.send(command)
+                    // await client.send(command)
                     const url = `https://deepdemobucket.s3.ap-south-1.amazonaws.com/${req.files[e].name}`
                     await userprofile.findByIdAndUpdate(userData._id, { "userImage": url }, { new: true }).then((data) => res.status(200).json({ "Message": data })).catch((err) => res.status(500).json({ "Message": err }))
+                    // res.send(command)
                 }
                 catch (e) {
                     res.status(500).send(e)
@@ -41,7 +42,7 @@ export const uploadUserProfile = async (req, res) => {
             res.status(500).send("Something Went Wrong!!")
         }
     } catch (error) {
-        res.status(500).json({ Messsage: "Something went Wrong", Error: error });
+        res.status(400).json({ "Messsage": "Something went Wrong", "Error": error });
     }
 }
 
@@ -62,7 +63,7 @@ export const userBackgroundImage = async (req, res) => {
                 })
 
                 try {
-                    await client.send(command)
+                    // await client.send(command)
                     const url = `https://deepdemobucket.s3.ap-south-1.amazonaws.com/${req.files[e].name}`
                     await userprofile.findByIdAndUpdate(userData._id, { "backgroundImage": url }, { new: true }).then((data) => res.status(200).json({ "Message": data })).catch((err) => res.status(500).json({ "Message": err }))
                 }

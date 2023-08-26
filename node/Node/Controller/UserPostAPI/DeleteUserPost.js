@@ -7,16 +7,16 @@ import { likecomment } from "../../Models/LikeComment.js";
 export const deleteUserPost = async (req, res) => {
 
     try {
-        const postData = await posts.findById(req.body.postId)
+        const postData = await posts.findById(req.query.postId)
 
         if (postData) {
-            const commentData = await comment.find({ "postId": req.body.postId })
+            const commentData = await comment.find({ "postId": req.query.postId })
             commentData.forEach(async (e) => {
                 await likecomment.deleteMany({ "commentId": e._id })
             })
-            await posts.findByIdAndDelete(req.body.postId).then().catch()
-            await like.deleteMany({ "postId": req.body.postId }).then().catch()
-            await comment.deleteMany({ "postId": req.body.postId }).then(() => res.status(200).json({ "Message": "Deleted Successfully" })).catch()
+            await posts.findByIdAndDelete(req.query.postId).then().catch()
+            await like.deleteMany({ "postId": req.query.postId }).then().catch()
+            await comment.deleteMany({ "postId": req.query.postId }).then(() => res.status(200).json({ "Message": "Deleted Successfully" })).catch()
         }
         else {
             res.status(204).json({ "Message": "Something Went Wrong" })

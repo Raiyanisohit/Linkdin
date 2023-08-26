@@ -1,10 +1,9 @@
 import express from "express";
-import { registerUser, checkUserExist } from "../Controller/SignUpControl.js";
+import { checkUserExist } from "../Controller/SignUpControl.js";
 import { logInUser } from "../Controller/LogInControl.js";
 import { forgetPassword } from "../Controller/ForgetPassword.js";
 import { validater } from "../MiddleWare/Middleware.js";
 import { addUser } from "../Controller/Create.userProfile.js";
-// import { getAllData } from "../Controller/GetAllData.js";
 import { createUserPost } from "../Controller/UserPostAPI/CreateUserPost.js";
 import { checkUserOTP } from "../Controller/UserRegister.checkotp.js";
 import { userProfile } from "../Controller/Login.userdata.js";
@@ -13,10 +12,10 @@ import { updateNewPassword } from "../Controller/Updatenewpassword.js";
 import { getAllPost, logInUserPost } from "../Controller/Allpostdata.js";
 import { uploadUserProfile, userBackgroundImage } from "../Controller/UploadUserProfile.js";
 import { editUserInfo } from "../Controller/UserProfilePageAPI/EditUserAbout.js";
-import { addUserExperience } from "../Controller/UserProfilePageAPI/AddUserExperience.js";
-import { addUserEducation } from "../Controller/UserProfilePageAPI/AddUserEducation.js";
-import { addUserProject } from "../Controller/UserProfilePageAPI/AddUserProject.js";
-import { addUserSkill } from "../Controller/UserProfilePageAPI/AddUserSkill.js";
+import { addUserExperience, deleteUserExperience, editUserExperience, getUserExperience } from "../Controller/UserProfilePageAPI/AddUserExperience.js";
+import { addUserEducation, deleteUserEducation, editUserEducation, getUserEducation } from "../Controller/UserProfilePageAPI/AddUserEducation.js";
+import { addUserProject, deleteUserProject, editUserProject, getUserProject } from "../Controller/UserProfilePageAPI/AddUserProject.js";
+import { addUserSkill, deleteUserSkill, editUserSkill, getAllSkills } from "../Controller/UserProfilePageAPI/AddUserSkill.js";
 import { userComment } from "../Controller/CommentAPI/UserComment.js";
 import { getPostCommentNo, getPostComments, getUsersComments } from "../Controller/CommentAPI/GetPostCommentNo.js";
 import { postLike } from "../Controller/UserPostAPI/PostLike.js";
@@ -27,68 +26,128 @@ import { acceptOrDeclineRequest, checkConnectionRequest, getAllConnectionRequest
 import { commentLike } from "../Controller/CommentAPI/CommentLike.js";
 import { checkLikeComment, countCommentLikes } from "../Controller/CommentAPI/CheckCommentLike.js";
 import { deleteUserPost } from "../Controller/UserPostAPI/DeleteUserPost.js";
-import { addLicenceAndCertificate } from "../Controller/UserProfilePageAPI/LicenceAndCertificate.js";
-import { addPublication } from "../Controller/UserProfilePageAPI/AddPublication.js";
-import { addHonorsAndAwards } from "../Controller/UserProfilePageAPI/AddHonorsAndAwards.js";
-import { addCourses } from "../Controller/UserProfilePageAPI/AddCourses.js";
+import { addLicenceAndCertificate, deleteLicenceAndCertificate, editLicenceAndCertificate, getLicenceAndCertificateData } from "../Controller/UserProfilePageAPI/LicenceAndCertificate.js";
+import { addPublication, deleteUserPublication, editUserPublication, getUserPublicationData } from "../Controller/UserProfilePageAPI/AddPublication.js";
+import { addHonorsAndAwards, deleteHonorsAndAward, editUserHonorsdAndAward, getHonorsAndAward } from "../Controller/UserProfilePageAPI/AddHonorsAndAwards.js";
+import { addCourses, deleteUserCource, getUserCources, updateCourceData } from "../Controller/UserProfilePageAPI/AddCourses.js";
 import { getRecommendationRequest, sendRecommendationRequest, userRecommendation, userRecommendationSearch, usersGivenRecommendation, usersReceivedRecommendation } from "../Controller/UserProfilePageAPI/UserRecommendation.js";
 import { updateUserProfile } from "../Controller/UserProfilePageAPI/UpdateUserProfile.js";
-import { addUserLanguage } from "../Controller/UserProfilePageAPI/AddUserLanguage.js";
+import { addUserLanguage, deleteUserLanguage, editUserLanguage, getAllUserLanguage } from "../Controller/UserProfilePageAPI/AddUserLanguage.js";
 import { editUserPost } from "../Controller/UserPostAPI/Editpost.js";
 const route = express.Router();
 
-route.post("/", checkUserExist); //done
-route.post("/registerUser", registerUser);//done
-route.post("/logIn", logInUser); //done
+route.post("/", checkUserExist);
+route.post("/logIn", logInUser);
 route.post("/forgetPassword", forgetPassword);
-route.post("/addUser", addUser); //done
-route.post("/checkUserOTP", checkUserOTP); //done
+route.post("/addUser", addUser);
+route.post("/checkUserOTP", checkUserOTP);
 route.post("/checkForgetOTP", forgetPasswordOTPCheck);
 route.put("/updatePassword", updateNewPassword);
+
+// Middleware for validate user request
 route.use(validater);
-route.post("/checkUserLikePost", checkUserPostLike); //done
-route.post("/userSearch", userSearch); //done
-route.post("/postLikeCalculate", postLikeCalculate); //done
-route.post("/postLike", postLike); //done
-route.post("/getPostComments", getPostComments);//done
-route.post("/getPostCommentNo", getPostCommentNo);//done
-route.post("/userComment", userComment);//done
-route.post("/addUserSkill", addUserSkill);//done
-route.post("/addUserProject", addUserProject);//done
-route.post("/addUserEducation", addUserEducation);//done
-route.post("/addUserExperience", addUserExperience);//done
-route.post("/uploadUserProfile", uploadUserProfile);//done
-route.post("/editUserInfo", editUserInfo);//done
-route.post("/allUserPost", getAllPost);//done
-route.post("/createUSerPost", createUserPost);//done
-// route.get("/getAllData", getAllData);
-route.post("/getUserData", userProfile);//done
-route.post("/checkConnectionRequest", checkConnectionRequest);//done
-route.get("/getAllConnectionRequest", getAllConnectionRequest); //done
-route.post("/sendConnectionRequest", sendConnectionRequest); //done
-route.post("/acceptOrDeclineRequest", acceptOrDeclineRequest); //done
-route.post("/getTotalConnectionNo", getTotalConnections); //done
-route.post("/commentLike", commentLike);//done
-route.post("/checkCommentLike", checkLikeComment);//done
-route.post("/getCommentLikes", countCommentLikes);//done
-route.delete("/deleteUserPost", deleteUserPost);//done
-route.post("/loginUserPosts", logInUserPost);//done
-route.post("/userCommentData", getUsersComments);//done
-route.post("/addLicenceAndCertificate", addLicenceAndCertificate);//pending
-route.post("/addPublication", addPublication);//pending
-route.post("/addHonorsAndAwards", addHonorsAndAwards);//pending
-route.post("/addCourses", addCourses);//pending
-route.post("/userRecommendationSearch", userRecommendationSearch);//pending
-route.post("/sendRecommendationRequest", sendRecommendationRequest);//pending
-route.get("/getRecommendationRequest", getRecommendationRequest);//pending
-route.post("/userRecommendation", userRecommendation);//pending
-route.post("/usersReceivedRecommendation", usersReceivedRecommendation);//pending
-route.post("/usersGivenRecommendation", usersGivenRecommendation);//pending
-route.put("/updateUserProfile", updateUserProfile);//done
-route.post('/userBackgroundImage', userBackgroundImage)
-route.get('/userConnections', userConnections) //done
-route.delete('/removeConnection', removeUserConnection) //done
-route.post('/addUserLanguage', addUserLanguage)
-route.put('/editUserPost',editUserPost)
+
+// API for user post
+route.post("/checkUserLikePost", checkUserPostLike);
+route.post("/postLikeCalculate", postLikeCalculate);
+route.post("/postLike", postLike);
+route.post("/getPostComments", getPostComments);
+route.post("/getPostCommentNo", getPostCommentNo);
+route.post("/allUserPost", getAllPost);
+route.delete("/deleteUserPost", deleteUserPost);
+route.post("/createUSerPost", createUserPost);
+route.put("/editUserPost", editUserPost);
+
+// other APIs
+route.post("/userSearch", userSearch);
+route.post("/getUserData", userProfile);
+route.get("/userConnections", userConnections);
+
+// API for userProfie page
+route.put("/updateUserProfile", updateUserProfile);
+route.post("/editUserInfo", editUserInfo);
+route.post("/loginUserPosts", logInUserPost);
+route.post("/userCommentData", getUsersComments);
+route.post("/uploadUserProfile", uploadUserProfile);
+
+// API for CRUD on userSkill
+route.get("/getUserSkill", getAllSkills);
+route.post("/addUserSkill", addUserSkill);
+route.put("/updateUserSkill", editUserSkill);
+route.delete("/removeSkill", deleteUserSkill);
+
+// API for userProject CRUD
+route.post("/addUserProject", addUserProject);
+route.get("/getUserProject", getUserProject);
+route.put("/editUserProject", editUserProject);
+route.delete("/deleteUserProject", deleteUserProject);
+
+// API for userEducation CRUD
+route.post("/addUserEducation", addUserEducation);
+route.get("/getUserEducationData", getUserEducation);
+route.put("/editUserEducation", editUserEducation);
+route.delete("/deleteUserEducation", deleteUserEducation);
+
+// API for user experience CRUD
+route.post("/addUserExperience", addUserExperience);
+route.get("/getUserExperience", getUserExperience);
+route.put("/editUserExperience", editUserExperience);
+route.delete("/deleteUserExperience", deleteUserExperience);
+
+// API for CRUD licence and certificate
+route.get("/getLicenceAndCertificate", getLicenceAndCertificateData);
+route.post("/addLicenceAndCertificate", addLicenceAndCertificate);
+route.put("/editLicenceAndCertificate", editLicenceAndCertificate);
+route.delete("/deleteLicenceAndCertificate", deleteLicenceAndCertificate);
+
+// API to CRUD user publication
+route.post("/addPublication", addPublication);
+route.get("/getUserPublication", getUserPublicationData)
+route.put("/editUserPublication", editUserPublication);
+route.delete("/delteUserPublication", deleteUserPublication)
+
+// API for cource CRUD
+route.post("/addCourses", addCourses);
+route.get("/getUserCource", getUserCources);
+route.put("/updateUserCource", updateCourceData);
+route.delete("/deleteUserCourec", deleteUserCource);
+
+// API for honorsAndAwards CRUD
+route.post("/addHonorsAndAwards", addHonorsAndAwards);
+route.get("/getHonorsAndAwars", getHonorsAndAward);
+route.put("/editHonorsAndAwars", editUserHonorsdAndAward);
+route.delete("/deleteHonorsAndAwards", deleteHonorsAndAward);
+
+route.post("/userBackgroundImage", userBackgroundImage);
+
+// User language CRUD
+route.post("/addUserLanguage", addUserLanguage);
+route.put("/editUserLanguage", editUserLanguage);
+route.get("/getUserLanguage", getAllUserLanguage);
+route.delete("/deleteUserLanguage", deleteUserLanguage);
+
+// API for connections
+route.post("/checkConnectionRequest", checkConnectionRequest);
+route.get("/getAllConnectionRequest", getAllConnectionRequest);
+route.post("/sendConnectionRequest", sendConnectionRequest);
+route.post("/acceptOrDeclineRequest", acceptOrDeclineRequest);
+route.post("/getTotalConnectionNo", getTotalConnections);
+
+// API for comment
+route.post("/userComment", userComment);
+route.post("/commentLike", commentLike);
+route.post("/checkCommentLike", checkLikeComment);
+route.post("/getCommentLikes", countCommentLikes);
+
+// API for recommendation
+route.post("/userRecommendationSearch", userRecommendationSearch);
+route.post("/sendRecommendationRequest", sendRecommendationRequest);
+route.get("/getRecommendationRequest", getRecommendationRequest);
+route.post("/userRecommendation", userRecommendation);
+route.post("/usersReceivedRecommendation", usersReceivedRecommendation);
+route.post("/usersGivenRecommendation", usersGivenRecommendation);
+
+// API for connection
+route.delete("/removeConnection", removeUserConnection);
 
 export default route;

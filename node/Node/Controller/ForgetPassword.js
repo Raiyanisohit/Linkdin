@@ -1,7 +1,9 @@
 import { signup } from '../Models/SignUp.js';
 import { emailValidation } from "../Validation/ForgetPassword.js";
 import { forgetpasswordotp } from '../Models/ForgetPassword.otp.js';
-import nodemailer from 'nodemailer'
+import { userMail } from '../Utils/Mail.js';
+import { ForgrtOTPTemplete } from '../View/ForgrtOTP.js';
+import { userprofile } from '../Models/Profile.js'
 
 export const forgetPassword = async (req, res) => {
 
@@ -10,7 +12,7 @@ export const forgetPassword = async (req, res) => {
         const result = emailValidation({ email });
 
         if (result.error) {
-            res.status(200).send(result.error.details[0].message);
+            res.status(200).json({ "Message": result.error.details[0].message });
         }
         else {
             const data = await signup.findOne({ "email": req.body.email });
@@ -26,61 +28,38 @@ export const forgetPassword = async (req, res) => {
                 const userData = await forgetpasswordotp.findOne({ "email": req.body.email })
                 if (userData) {
 
-                    const transpoter = nodemailer.createTransport({
-                        host: "mail.mailtest.radixweb.net",
-                        port: "465",
-                        secure: "false",
-                        auth: {
-                            user: "testdotnet@mailtest.radixweb.net",
-                            pass: 'Radix@web#8'
-                        }
-                    });
+                    const userdata = await userprofile.findOne({ "email": userData.email })
+                    console.log(userdata.userImage)
+                    const templete = ForgrtOTPTemplete(userdata.firstName, userdata.lastName, newOTP.toString(), userdata.userImage)
 
-                    const mailOption = {
-                        from: "testdotnet@mailtest.radixweb.net",
-                        to: userData.email,
-                        subject: "OTP from linkedIn",
-                        text: "OTP to reset your password " + newOTP.toString()
+                    const usermail = await userMail(userData.email, templete)
+
+                    if (usermail.response) {
+                        await forgetpasswordotp.findByIdAndUpdate(userData._id, { "OTP": newOTP.toString() }, { new: true }).then((data) => res.status(200).json({ "Message": "OTP Cuccessfully Created", "Data": data })).catch((err) => res.status(500).json({ "Message": err }))
                     }
-
-                    transpoter.sendMail(mailOption, function (err) {
-                        if (err) console.log(err)
-                        else console.log("")
-                    })
-
-                    await forgetpasswordotp.findByIdAndUpdate(userData._id, { "OTP": newOTP.toString() }, { new: true }).then((data) => res.status(200).json({ "Message": "OTP Cuccessfully Created", "Data": data })).catch((err) => res.status(500).json({ "Message": err }))
+                    else {
+                        res.status(500).json({ "Message": "Please try again" })
+                    }
                 }
                 else {
                     const forgetotp = new forgetpasswordotp(forgetOTP)
-                    console.log(forgetotp)
 
-                    const transpoter = nodemailer.createTransport({
-                        host: "mail.mailtest.radixweb.net",
-                        port: "465",
-                        secure: "false",
-                        auth: {
-                            user: "testdotnet@mailtest.radixweb.net",
-                            pass: 'Radix@web#8'
-                        }
-                    });
+                    const userdata = await userprofile.findOne({ "email": forgetotp.email })
+                    const templete = ForgrtOTPTemplete(userdata.firstName, userdata.lastName, newOTP.toString(), userdata.userImage)
 
-                    const mailOption = {
-                        from: "testdotnet@mailtest.radixweb.net",
-                        to: forgetotp.email,
-                        subject: "OTP from linkedIn",
-                        text: "OTP to reset your password " + newOTP.toString()
+                    const usermail = await userMail(forgetotp.email, templete)
+
+                    if (usermail.response) {
+                        await forgetotp.save().then((data) => res.status(200).json({ "Message": "OTP Cuccessfully Created", "Data": data }))
+                    }
+                    else {
+                        res.status(500).json({ "Message": "Please try again" })
                     }
 
-                    transpoter.sendMail(mailOption, function (err,info) {
-                        if (err) console.log(err)
-                        else console.log(info.response)
-                    })
-
-                    await forgetotp.save().then((data) => res.status(200).json({ "Message": "OTP Successfully Created", "Data": data }))
                 }
             }
             else {
-                res.status(204).send("User not exist");
+                res.status(200).json({ "Message": "User not exist" });
             }
         }
     } catch (error) {

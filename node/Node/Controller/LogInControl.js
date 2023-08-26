@@ -20,11 +20,10 @@ export const logInUser = async (req, res) => {
                 const val = await bcrypt.compare(req.body.password, userData.password);
                 if (val) {
                     const token = jwt.sign({ userData }, "DeepsLinkedIn", { expiresIn: "10hr" });
-                    // res.cookies("token",token)   
                     res.status(200).json({ "token": token })
                 }
                 else {
-                    res.status(401).send("Wrong Password");
+                    res.status(200).send("Wrong Password");
                 }
             }
             else {

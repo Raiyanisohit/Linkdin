@@ -16,10 +16,9 @@ const client = new S3Client({
 export const createUserPost = async (req, res) => {
 
     try {
+        // console.log(req.files)
         const userData = await userprofile.findOne({ "email": req.body.email })
-        // console.log(userData)
         if (userData) {
-
             if (req.files) {
                 let data = req.files.photo;
 
@@ -54,7 +53,7 @@ export const createUserPost = async (req, res) => {
                     }
                 })
 
-                // console.log(postLink)
+                // console.log(req.body.postText)
                 const userPost = {
                     userName: userData._id,
                     text: req.body.postText,

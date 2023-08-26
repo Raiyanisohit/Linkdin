@@ -10,8 +10,8 @@ export const checkUserOTP = async (req, res) => {
         const checkUser = await otp.findOne({ "email": req.body.email })
 
         if (checkUser) {
+            // console.log(req.body)
             if (checkUser.OTP === req.body.OTP) {
-
                 const hashPassword = await bcrypt.hash(req.body.password, 10)
 
                 const userData = {
@@ -24,15 +24,13 @@ export const checkUserOTP = async (req, res) => {
                 const newusersignup = new signup(userData)
                 await newusersignup.save().then().catch()
 
-                console.log(req.body)
-                console.log(req.body.education)
-
                 if (req.body.education) {
 
                     const data = new userprofile(req.body);
-                    data.save(data).then().catch();
+                    await data.save(data).then().catch();
 
                     const userData = await userprofile.findOne({ "email": req.body.email })
+                    // console.log(userData)
 
                     const newEducation = {
                         instituteName: req.body.education[0].CollegeName,
@@ -45,11 +43,10 @@ export const checkUserOTP = async (req, res) => {
                     await userprofile.findByIdAndUpdate(userData._id, { $push: { "education": newEducation } }, { new: true }).then(() => res.status(200).json({ "Message": "User Created Successfully", "Token": token })).catch((err) => res.status(500).json({ "Message": err }))
                 }
                 else {
-
                     if (req.body.experienceEndMonth !== "") {
 
                         const data = new userprofile(req.body);
-                        data.save(data).then().catch();
+                        await data.save(data).then().catch();
 
                         const newExperience = {
                             companyName: req.body.experience[0].companyName,
@@ -67,7 +64,7 @@ export const checkUserOTP = async (req, res) => {
                     }
                     else {
                         const data = new userprofile(req.body);
-                        data.save(data).then().catch();
+                        await data.save(data).then().catch();
 
                         const newExperience = {
                             companyName: req.body.experience[0].companyName,

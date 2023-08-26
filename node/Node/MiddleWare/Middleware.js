@@ -1,21 +1,15 @@
 import jwt from 'jsonwebtoken';
 
-export const validater = (req, res, next) => {
+export const validater = (req,res,next) => {
     const token = req.headers.token;
-    console.log(token,"token")
 
-    try {
-        const decode = jwt.verify(token, "DeepsLinkedIn")
-        req.body.email = decode.userData.email
-        next();
-    } catch (e) {   
-console.log(e.message)
-        res.send("Unothorized Access");
-    }
-    // const decode = jwt.verify(token, "DeepsLinkedIn", (err, data) => {
-
-        // console.log(data)
-
-
-    // });
+    jwt.verify(token,"DeepsLinkedIn",(err,data)=>{
+        if(err){
+            res.send("Unothorized Access");
+        }
+        else{
+            req.body.email = data.userData.email
+            next();
+        }
+    });
 } 

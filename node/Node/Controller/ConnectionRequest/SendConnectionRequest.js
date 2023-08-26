@@ -75,7 +75,7 @@ export const getAllConnectionRequest = async (req, res) => {
 }
 
 // Function to accept or decline the request
-export const acceptOrDeclineRequest = async (req, res) => { 
+export const acceptOrDeclineRequest = async (req, res) => {
 
     try {
         const checkData = await connectionrequest.findById(req.body.id)
@@ -146,7 +146,7 @@ export const userConnections = async (req, res) => {
 export const removeUserConnection = async (req, res) => {
     try {
         const userData = await userprofile.findOne({ "email": req.body.email })
-        const apponentData = await userprofile.findOne({ "_id": req.body.userId })
+        const apponentData = await userprofile.findOne({ "_id": req.query.userId })
 
         if (userData && apponentData) {
             const data = await connectionrequest.find({ "requestUserId": userData._id, "userId": apponentData._id })

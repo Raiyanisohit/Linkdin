@@ -6,7 +6,7 @@ import { recommendation } from "../../Models/Recommendation.js";
 export const userRecommendationSearch = async (req, res) => {
     try {
         const userData = await userprofile.findOne({ email: req.body.email });
-        const usersConnection = await connectionrequest.find({ requestUserId: userData._id }).populate("userId", "firstName lastName userImage profileHeadline _id");
+        const usersConnection = await connectionrequest.find({ requestUserId: userData._id, requestStatus:"Success" }).populate("userId", "firstName lastName userImage profileHeadline _id");
 
         const val = req.body.name.split(" ");
 
@@ -28,7 +28,7 @@ export const sendRecommendationRequest = async (req, res) => {
         const userData = await userprofile.findOne({ email: req.body.email });
 
         if (userData) {
-            const checkRecommendation = await recommendation.find({ sentUser: userData._id, acceptUser: req.body.acceptUser, });
+            const checkRecommendation = await recommendation.find({ sentUser: userData._id, acceptUser: req.body.acceptUser, status:"Success"});
 
             if (checkRecommendation.length > 0) {
                 res.status(200).json({ Message: "Request Already Sent" });
