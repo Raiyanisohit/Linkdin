@@ -11,7 +11,7 @@ export const getAllPost = async (req, res) => {
         }
         else {
             const allPostData = await posts.find().populate('userName', 'email firstName lastName userImage')
-            res.status(200).send(allPostData.reverse())
+            res.status(200).send(allPostData)
         }
     } catch (error) {
         res.status(500).json({ Messsage: "Something went Wrong", Error: error });
