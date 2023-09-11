@@ -10,6 +10,8 @@ import { toast } from "vue3-toastify";
 import "vue3-toastify/dist/index.css";
 const storemonth = usemonthStore();
 const store = usesignupdataStore();
+const currentYear = new Date().getFullYear();
+const currentMonth = new Date().getMonth() + 1;
 const inputjob = reactive({
   jobtitle: "",
   employe: "",
@@ -68,6 +70,8 @@ watchEffect(() => {
 watchEffect(() => {
   if (inputjob.Startmonth == "") {
     validationerror.startmonth = "";
+  }else if(currentYear === inputjob.Startyear && inputjob.Startmonth > currentMonth){
+      validationerror.startmonth = "Start date can’t be in the future";
   } else {
     validationerror.startmonth = "";
   }
@@ -100,6 +104,8 @@ watchEffect(() => {
   ) {
     validationerror.Endmonth =
       "The Month range End-month cannot be before the Start-month";
+  }else if(currentYear === inputjob.Endmonth &&  inputjob.Endmonth > currentMonth){
+    validationerror.Endmonth = "Start date can’t be in the future";
   } else {
     validationerror.Endmonth = "";
   }
@@ -142,7 +148,8 @@ async function handlesubmit() {
     inputjob.jobtitle.trim() != "" &&
     inputjob.Startmonth != "" &&
     inputjob.Startyear != "" &&
-    inputjob.role == true
+    (currentYear >= inputjob.Startyear && inputjob.Startmonth <= currentMonth)&&
+    inputjob.role == true 
   ) {
     if (validationrouter.value != true) {
       toast.error(
@@ -173,6 +180,7 @@ async function handlesubmit() {
   if (
     //End_month & End_year
     inputjob.compunyname != "" &&
+      (currentYear >= inputjob.Endyear && inputjob.Endmonth <= currentMonth) &&
     inputjob.employe != "" &&
     inputjob.jobtitle != "" &&
     inputjob.Startmonth != "" &&
@@ -216,7 +224,6 @@ async function handlesubmit() {
   }
 }
 </script>
-
 
 <template>
   <div class="h-screen flex flex-col items-center justify-center">
@@ -289,14 +296,14 @@ async function handlesubmit() {
             class="block text-gray-700 text-sm font-bold mb-2"
             for="username"
           >
-            Compuny Name*
+            Company Name*
           </label>
           <input
             v-model="inputjob.compunyname"
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-1 leading-tight focus:outline-none focus:shadow-outline"
             id="firstname"
             type="text"
-            placeholder="Compuny_Name"
+            placeholder="Company_Name"
           />
           <p class="text-red-600 font-semibold absolute font-serif">
             {{ validationerror ? validationerror.compunyname : "" }}
@@ -308,7 +315,7 @@ async function handlesubmit() {
             class="w-4 h-4 mt-2"
             id="firstname"
             type="checkbox"
-            placeholder="Compuny Name"
+            placeholder="Company Name"
           />
           <span class="ps-2"> I am currently working in this role</span>
           <p class="text-red-600 font-semibold font-serif">

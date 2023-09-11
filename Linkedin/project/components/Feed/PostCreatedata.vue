@@ -42,6 +42,7 @@ async function userpost() {
   
   }
 }
+
 function close(){
 imgurl.value = ""
 photos.value = ""
@@ -68,7 +69,7 @@ textarea.value = ""
           @click="close"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
-            class="flex text-gray-500 hover:bg-slate-100 border-2 w-[200px] lg:w-[400px] py-2 rounded-3xl"
+            class="flex text-gray-500 hover:bg-slate-100 border-2 w-[200px] md:w-[400px] py-2 rounded-3xl"
           >
             <span class="px-3 py-1 font-bold" >Start a post</span>
           </button>

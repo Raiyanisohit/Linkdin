@@ -63,7 +63,7 @@ async function handlesubmitcource() {
     });
    const newdata = await postdata("addCourses",data)
    await getcource()
-   toast.success('New Cource Added Successfully',{
+   toast.success('New Course Added Successfully',{
             autoClose:1500
        });
    cource.cource_name = ""
@@ -127,6 +127,7 @@ const edit = () => {
     </div>
   </div>
 
+<!-- --------------------------------model------------------------------------------- -->
 
 <modal id="cource" title=" Add course">
     <form @submit.prevent="handlesubmitcource">

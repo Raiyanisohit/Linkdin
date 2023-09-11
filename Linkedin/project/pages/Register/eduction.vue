@@ -8,6 +8,8 @@ import { usemonthStore } from "../../store/Month";
 const storemonth = usemonthStore();
 const store = usesignupdataStore();
 const router = useRouter();
+const currentYear = new Date().getFullYear();
+const currentMonth = new Date().getMonth() + 1;
 const inputedu = reactive({
   college: "",
   Startmonth: "",
@@ -46,7 +48,9 @@ watchEffect(() => {
 watchEffect(() => {
   if (inputedu.Startmonth == "") {
     validationerror.startmonth = "";
-  } else {
+  } else if(currentYear === inputedu.Startyear && inputedu.Startmonth > currentMonth){
+      validationerror.startmonth = "Start date can’t be in the future";
+  }else {
     validationerror.startmonth = "";
   }
 });
@@ -66,6 +70,8 @@ watchEffect(() => {
     inputedu.Startmonth > inputedu.Endmonth
   ) {
     validationerror.Endmonth = "The Month range End-month cannot be before the Start-month";
+  } else if(currentYear === inputedu.Endyear &&  inputedu.Endmonth > currentMonth){
+    validationerror.Endmonth = "Start date can’t be in the future";
   } else {
     validationerror.Endmonth = "";
   }
@@ -113,6 +119,7 @@ async function handlesubmit() {
     inputedu.Startyear != "" &&
     inputedu.Endmonth != "" &&
     inputedu.Endyear != "" &&
+    (currentYear >=   inputedu.Startyear&&  inputedu.Startmonth <= currentMonth)&&(currentYear >= inputedu.Endyear  && inputedu.Endmonth  <= currentMonth) &&
     (inputedu.Endyear > inputedu.Startyear ||
     (inputedu.Startyear === inputedu.Endyear &&
      inputedu.Startmonth <= inputedu.Endmonth))
@@ -206,7 +213,7 @@ async function handlesubmit() {
                   {{ list }}
                 </option>
               </select>
-              <p class="text-red-600 font-semibold font-serif absolute ps-1">
+              <p class="text-red-600 font-semibold font-serif absolute ps-1 lg:w-[200px]">
                 {{ validationerror ? validationerror.startmonth : "" }}
               </p>
             </div>
@@ -235,7 +242,7 @@ async function handlesubmit() {
             </div>
           </div>
         </div>
-        <div class="mb-3">
+        <div class="mb-3 pt-4">
           <div class="flex">
             <div class="w-full">
               <label for="message-text" class="block ps-1 text-gray-700 text-sm font-bold mb-2"
@@ -286,7 +293,7 @@ async function handlesubmit() {
           </div>
         </div>
 
-        <div class="mb-2 pt-[33px]">
+        <div class="mb-2 pt-[35px]">
           <input
             v-model="validationrouter"
             class="w-5 h-5 "

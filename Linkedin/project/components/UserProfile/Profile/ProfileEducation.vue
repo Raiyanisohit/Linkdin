@@ -11,7 +11,6 @@ const routeparams = ref(route.params.id);
 const store = usemonthStore();
 const post = ref([]);
 const router = useRouter();
-
 const currentYear = new Date().getFullYear();
 const currentMonth = new Date().getMonth() + 1;
 const education = reactive({
@@ -127,12 +126,11 @@ async function handlesubmit() {
     education.Startyear != "" &&
     education.Endmonth != "" &&
     education.Endyear != "" &&
-    ( (currentYear >=   education.Startyear &&  education.Startmonth <= currentMonth)&&(currentYear >= education.Endyear && education.Endmonth  <= currentMonth) ) &&
+     (currentYear >=   education.Startyear &&  education.Startmonth <= currentMonth)&&(currentYear >= education.Endyear && education.Endmonth  <= currentMonth) &&
     (education.Endyear > education.Startyear ||
      (education.Startyear === education.Endyear &&
      education.Startmonth <= education.Endmonth))
 
-    
   ) {
     const data = JSON.stringify({
       instituteName: education.school,
@@ -161,7 +159,7 @@ function edit() {
   router.push("/edit/editeducation");
 }
 function close(){
-     education.school = "";
+    education.school = "";
     education.Degree = "";
     education.study = "";
     education.Startyear = "";

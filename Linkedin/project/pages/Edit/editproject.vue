@@ -52,7 +52,7 @@ async function editmodal(id) {
   deletid.value = id;
 
   projecttitle.value = Alluserproject.value.find((i) => i._id == id).projectName;
-  projectlink.value = Alluserproject.value.find((i) => i._id == id).link;
+  projectlink.value = Alluserproject.value.find((i) => i._id == id).projectLink;
   projectdescprition.value = Alluserproject.value.find((i) => i._id == id).description;
   let  index = Alluserproject.value.find((i) => i._id == id).projectStartMonth;
   let monthindex = store.month.findIndex((i)=> i == index)
@@ -62,7 +62,6 @@ async function editmodal(id) {
   let endmonthindex = store.month.findIndex((i)=> i == indexendmonth)
   projectEndmonth.value = endmonthindex + 1
   projectEndyear.value = Alluserproject.value.find((i) => i._id == id).projectEndYear;
-console.log(projectEndyear.value)
   if (projectEndmonth.value == "") {
     enddate.value = true;
     } else {
@@ -82,7 +81,6 @@ watchEffect(() => {
 });
 
 watchEffect(() => {
-  console.log(projectEndmonth.value)
   if (projectEndmonth.value == "") {
     error.endmonth = "";
   } else if (
@@ -132,6 +130,7 @@ async function handleproject() {
     projecttitle.value.trim() != "" &&
     projectStartmonth.value != "" &&
     projectStartyear.value != "" &&
+    
      (currentYear >= projectStartyear.value && projectStartmonth.value <= currentMonth)
   ) {
 
@@ -141,6 +140,7 @@ async function handleproject() {
       description: projectdescprition.value,
       projectStartMonth: store.month[projectStartmonth.value - 1],
       projectStartYear: projectStartyear.value,
+      projectLink:projectlink.value,
       projectEndMonth: "",
       projectEndYear: "",
     });
@@ -174,6 +174,7 @@ async function handleproject() {
       description: projectdescprition.value,
       projectStartMonth: store.month[projectStartmonth.value - 1],
       projectStartYear: projectStartyear.value,
+      projectLink:projectlink.value,
       projectEndMonth: store.month[projectEndmonth.value - 1],
       projectEndYear: projectEndyear.value,
     });
@@ -237,6 +238,7 @@ function close() {
         <ul class="justify-between">
           <li class="text-[19px] py-1 font-bold">{{ m.projectName }}</li>
           <li class="text-[17px] pt-1 text-justify">{{ m.description }}</li>
+          <a target="_blank" :href="m.projectLink"><li class="text-justify pe-4 pt-1">{{ m.projectLink }}</li></a> 
           <li class="text-[17px] text-gray-500 pt-2">
             {{ m.projectStartMonth }} - {{ m.projectStartYear }}
           </li>

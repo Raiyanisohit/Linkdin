@@ -11,8 +11,10 @@ const props = defineProps([ "post"]);
      class="block  mt-3 bg-white border border-gray-200 w-[310px] md:w-[250px]  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
     >
     <div class="relative">
+      <div class="bg-cover">
       <img v-if="post.Message ? post.Message.backgroundImage : ''" class="rounded h-28 w-full" :src="post.Message ? post.Message.backgroundImage : ''" alt="">
-      <img v-else class="rounded h-28 w-full" src="https://static.licdn.com/sc/h/55k1z8997gh8dwtihm11aajyq" alt="">
+      <img v-else class="rounded bg-cover h-28 w-full" src="https://static.licdn.com/sc/h/55k1z8997gh8dwtihm11aajyq" alt="">
+      </div>
       <div class="absolute top-16 md:left-[70px] left-[100px] hover:cursor-pointer">
         <img  @click="router.push('/Profile')"
           class="w-24 h-24 mb-3 rounded-full border-2 shadow-lg"

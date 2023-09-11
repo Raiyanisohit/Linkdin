@@ -1,11 +1,11 @@
 import axios from 'axios'
-const HostName = ref("http://192.168.100.221:3010")
+const runtimeConfig = useRuntimeConfig();
 
 // -------------------------------get_All_Data-------------------------------------//
 
 export async function getconnection(URL) {
     try {
-        const value = await axios.get(`${HostName.value}/${URL}`,{
+        const value = await axios.get(`${runtimeConfig.public.API_BASE_URL}/${URL}`,{
             headers:{
                 "token":localStorage.getItem("token"),
                 'Content-Type': "application/json"
@@ -22,7 +22,7 @@ export async function getconnection(URL) {
 export const postdata = async (URL, data) => {
 
     try {
-        const value = await axios.post(`${HostName.value}/${URL}`, data,{
+        const value = await axios.post(`${runtimeConfig.public.API_BASE_URL}/${URL}`, data,{
             headers:{
                 "token":localStorage.getItem("token"),
                 'Content-Type': "application/json"
@@ -40,7 +40,7 @@ export const postdata = async (URL, data) => {
 
 export const postdataImg = async (URL, data) => {
     try {
-        const value = await axios.post(`${HostName.value}/${URL}`, data, {
+        const value = await axios.post(`${runtimeConfig.public.API_BASE_URL}/${URL}`, data, {
             headers:{
                 "token":localStorage.getItem("token"),
                 'Content-Type': "multipart/form-data"
@@ -58,7 +58,7 @@ export async function DeleteData(URL,data) {
     try {
         var config = {
             method: 'delete',
-            url: `${HostName.value}/${URL}`,
+            url: `${runtimeConfig.public.API_BASE_URL}/${URL}`,
             headers: {
                 'token': localStorage.getItem("token"),
                 'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ export async function UpdateData(URL,data) {
     try {
         var config = {
             method: 'put',
-            url: `${HostName.value}/${URL}`,
+            url: `${runtimeConfig.public.API_BASE_URL}/${URL}`,
             headers: {
                 'token': localStorage.getItem("token"),
                 'Content-Type': 'application/json',

@@ -5,10 +5,7 @@ import { postdata, getconnection, DeleteData } from "../../../services/api";
 const route = useRoute();
 const Profiledata = ref([]);
 
-const show = ref(false);
-function toggle() {
-  show.value = true;
-}
+
  
 //  ------------------------------loginUserPosts------------------------//
 

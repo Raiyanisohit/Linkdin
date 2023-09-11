@@ -1,6 +1,5 @@
 <script setup>
 import { postdata, getconnection, DeleteData } from "../../services/api";
-import axios from "axios";
 const props = defineProps(["post"]);
 const commentlikeshow = ref(true);
 const commentlike = ref("");

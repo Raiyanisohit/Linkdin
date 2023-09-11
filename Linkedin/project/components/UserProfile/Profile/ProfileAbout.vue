@@ -67,6 +67,7 @@ watchEffect(()=>{
     </div>
 
 <!-- -------------++++++++++++++++++++ model ++++++++++++++++++++----------------------- -->
+
 <modal id="about" title="Edit About">
   
  <form class="py-2" method="post" @submit.prevent="isaboute">

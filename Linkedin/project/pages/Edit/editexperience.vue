@@ -89,12 +89,13 @@ watchEffect(() => {
     error.employment_Endmonth = "";
   }
 });
+
 watchEffect(() => {
-  console.log(experienceStartmonth.value)
-  if (experienceStartmonth.value == "") {
+  if (experienceStartmonth.value === "") {
     error.employment_Startmonth = "";
-  } else if(currentYear === experienceStartyear.value && experienceStartmonth.value > currentMonth){
+  } else if(currentYear == experienceStartyear.value && experienceStartmonth.value > currentMonth ){
  error.employment_Startmonth = "Start date can’t be in the future";
+
   } else {
     error.employment_Startmonth = "";
   }

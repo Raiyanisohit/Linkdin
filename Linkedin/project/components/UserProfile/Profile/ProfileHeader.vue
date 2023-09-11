@@ -69,12 +69,10 @@ const userprofile = await postdata("getUserData?id=" + route.params.id)
 post.value = userprofile.Message
   }else{
     const userprofile = await postdata("getUserData")
-
     post.value = userprofile.Message
   }
 }
 getconnection();
-
 
 
 // ----------------------Update Info-----------------------------//
@@ -89,7 +87,6 @@ country.value = post.value.country
 industry.value =  post.value.industry
   
 }
-
 async function handlesubmit(){
 if(firstname.value == ""){
   error.firstname = "First-name is required"
@@ -124,7 +121,9 @@ if(firstname.value != "" && lastname.value != "" && city.value != "" && country.
 
 const Newdata = await UpdateData("updateUserProfile",data)
 await getconnection()
-
+ toast.success('Your Profile is Updated Successfully',{
+            autoClose:1500
+       });
        var myModalEl = document.getElementById('exampleModal');
        var modal = bootstrap.Modal.getInstance(myModalEl)
        modal.hide();
@@ -160,6 +159,9 @@ async function issubmit(){
       data.append("userImage", element);
     }
     const img = await postdataImg('uploadUserProfile',data)
+    toast.success('Your Profile Image is Updated ',{
+            autoClose:1500
+       });
       await  getconnection()
 }
 }
@@ -176,6 +178,9 @@ async function backgroundimgsubmit(){
     
     const img = await postdataImg('userBackgroundImage',data)
       await  getconnection()
+        toast.success('Your Background Image is Updated',{
+            autoClose:1500
+       });
 }
 }
 
@@ -228,7 +233,7 @@ error.industry =""
         v-if="post ? post.backgroundImage : ''"
         :src="post ? post.backgroundImage : ''"
         alt=""
-        class="w-full h-52 rounded-t-lg"
+        class="w-full h-56 rounded-t-lg"
       />
       <img
         v-else
@@ -290,7 +295,7 @@ error.industry =""
             class="text-blue-700 hover:text-blue-900 hover:underline  hover:cursor-pointer"
             data-bs-toggle="modal"
             data-bs-target="#contact"
-            >contact info</span
+            >Contact Info</span
           >
         </p>
         <p v-if="totalConnection > 0" class="text-blue-500 font-bold">{{ totalConnection }} Connections</p>
@@ -434,7 +439,7 @@ error.industry =""
               </div>
               <div v-if="route.params.id" class="ps-1 ">
                 <p class="text-[18px] font-bold">Your Profile</p>
-               <a target="_blank" href="localhost:3000/post/{{route.params.id}}" class=" hover:cursor-pointer">
+               <a target="_blank" :href="`/post/${route.params.id}`" class=" hover:cursor-pointer">
                 <p class="text-[16px]  hover:cursor-pointer">
                   localhost:3000/post/{{route.params.id}}
                 </p>
@@ -442,7 +447,7 @@ error.industry =""
               </div>
               <div v-else class="ps-1">
                 <p class="text-[18px] font-bold">Your Profile</p>
-               <a target="_blank" href="localhost:3000/profile" class=" hover:cursor-pointer">
+               <a target="_blank" href="/profile" class=" hover:cursor-pointer">
                 <p class="text-[16px]  hover:cursor-pointer">
                   localhost:3000/profile
                 </p>
@@ -551,12 +556,14 @@ error.industry =""
  <!-- -----------background img------------- -->
  
 <modal id="backgroundimg" title="Background Image ">
+            
             <img
               v-if="!(backgroundImageimgurl ? backgroundImageimgurl[0].name.includes('jpeg') || backgroundImageimgurl[0].name.includes('jpg') || backgroundImageimgurl[0].name.includes('png') || backgroundImageimgurl[0].name.includes('webp') : '')"
-              class="w-full border-4 border-dark h-96"
-              :src="post ? post.backgroundImage : ''"
+              class="w-full border-4 border-dark "
+              :src="post.backgroundImage >= '' ? post.backgroundImage : 'https://static.licdn.com/sc/h/55k1z8997gh8dwtihm11aajyq'"
               alt=""
             />
+            
             <img
               v-else
               class="w-full border-4 border-dark h-[500px]"

@@ -75,14 +75,11 @@ function close() {
 
 const handleSkillValue = (e) => {
   const val = e.target.value
-  console.log(val)
 
   if(val === ""){
      skillerror.value = "* Skill is Required";
   }
-  else{
-    console.log("filled input")
-  }
+  
 };
 </script>
 <template>

@@ -7,6 +7,7 @@ import axios from "axios";
 import { toast } from "vue3-toastify";
 import "vue3-toastify/dist/index.css";
 import {postdata} from '../services/api'
+const runtimeConfig = useRuntimeConfig();
 const input = reactive({ email: "", password: "" });
 const required = reactive({ email: "", password: "" });
 const error = ref("");
@@ -77,7 +78,7 @@ function handleLogin() {
       required.password = "Please enter a valid password.";
     } else {
       axios
-        .post("http://192.168.100.221:3010/LogIn", {
+        .post(`${runtimeConfig.public.API_BASE_URL}/LogIn`, {
           email: input.email,
           password: input.password,
         })

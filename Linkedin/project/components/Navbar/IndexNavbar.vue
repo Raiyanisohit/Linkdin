@@ -1,7 +1,7 @@
 <script setup>
 </script>
 <template>
-  <div class="flex  justify-around bg-white sticky top-0 flex-wrap">
+  <div class="flex  justify-around bg-white sticky top-0 flex-wrap z-50">
     <div class="">
       <img class="w-[160px] float-right" src="/assets/images/LinkedIn-logo.png" alt="" />
     </div>

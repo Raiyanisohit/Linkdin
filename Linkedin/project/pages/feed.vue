@@ -3,21 +3,19 @@ import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
 import { DeleteData, getconnection, postdata,UpdateData } from "../services/api.js";
 
-
 const router = useRouter()
 const postdata1 = ref([]);
 const AllUserpost = ref([]);
 const editpost = ref("")
 
-  const getUserData = await postdata("getUserData");
-
-
+const getUserData = await postdata("getUserData");
 
 watchEffect(()=>{
-  if( getUserData === "Unothorized Access" ){
+  if( getUserData === "Unothorized Access"){
     router.push('/login')
   }
 })
+
 // -----------------------------alluserpost-----------------------------//
 
 onMounted(async() => {
@@ -38,7 +36,7 @@ const userdeletpost = async()=> {
 }
 
 const newpostdata = ref("")
-  const errormessage = ref("")
+const errormessage = ref("")
 
 watchEffect(()=>{
   if(editpost.value.trim() === ""){
@@ -47,14 +45,16 @@ errormessage.value = ""
   errormessage.value == ""
   }
 })
+
 // ----------------------------------editUserPost-------------------------//
+
 async function savepost(){
   if((editpost.value != "" || editpost.value == "" ) && img.value == ""){
      if(editpost.value.trim() == ""){
      errormessage.value = "plese Enter your text"
       }else{
     const data = JSON.stringify({
-        postId:editid.value,
+      postId:editid.value,
       postText: editpost.value,
     })
      const newdata = await UpdateData("editUserPost",data)
@@ -116,13 +116,14 @@ const editid = ref("")
  editpost.value = edit.text
 }
 
-// ---------------------------------deletid ----------------------//
+// ---------------------------------deletid----------------------//
 
 const deletid = ref("")
 function deletepost(e){
    const deletdata =  AllUserpost.value.find((i)=>i._id == e)
    deletid.value = deletdata._id
 }
+
 const close =()=>{
 errormessage.value = ""
 }
@@ -130,7 +131,7 @@ errormessage.value = ""
 </script>
 <template>
   <!-- ------------------profile--------------- -->
-  <div class="flex flex-wrap relative justify-center">
+  <div class="flex  flex-wrap relative justify-center">
     <div>
       <Profile :post="getUserData ? getUserData : ''" class="sticky top-20 " />
     </div>
@@ -141,7 +142,7 @@ errormessage.value = ""
           @childDataChanged="handleChildDataChanged"
         />
       </div>
-      <div v-for="(m) in AllUserpost" :key="m">
+      <div  v-for="(m) in AllUserpost" :key="m">
         <PostAlldata
           :list="m ? m.userName : ''"
           :post="m ? m.post : ''"

@@ -109,7 +109,6 @@ function editmodal(id) {
   let  index = post.value.find((i) => i._id == id).startMonth;
   let monthindex = store.month.findIndex((i)=> i == index)
   educationstartmonth.value = monthindex + 1
-  console.log(educationstartmonth.value)
   educationstartyear.value = post.value.find((i) => i._id == id).startYear;
 
 
@@ -139,7 +138,7 @@ watchEffect(() => {
     educationstartyear.value != "" &&
     educationendmonth.value != "" &&
     educationendyear.value != "" &&
-    ( (currentYear >=   educationstartyear.value &&  educationstartmonth.value <= currentMonth)&&(currentYear >= educationendyear.value && educationendmonth.value  <= currentMonth) ) &&
+    (currentYear >=   educationstartyear.value &&  educationstartmonth.value <= currentMonth)&&(currentYear >= educationendyear.value && educationendmonth.value  <= currentMonth)  &&
     (educationendyear.value > educationstartyear.value ||
      (educationstartyear.value === educationendyear.value &&
      educationstartmonth.value <= educationendmonth.value)) ){

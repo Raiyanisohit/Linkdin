@@ -7,7 +7,7 @@ const router = useRouter();
 const inputotp = reactive({ otp: "" });
 const validationrouter = ref("");
 const validationerror = reactive({ otperror: "" });
-
+const runtimeConfig = useRuntimeConfig();
 definePageMeta({
   layout: "custome",
 });
@@ -55,7 +55,7 @@ function handlesubmit() {
 
     var config = {
       method: "post",
-      url: "http://192.168.100.221:3010/checkUserOTP",
+      url: `${runtimeConfig.public.API_BASE_URL}/checkUserOTP`,
       headers: {
         "Content-Type": "application/json",
       },
@@ -104,7 +104,7 @@ function handlesubmit() {
     });
     var config = {
       method: "post",
-      url: "http://192.168.100.221:3010/checkUserOTP",
+      url:`${runtimeConfig.public.API_BASE_URL}/checkUserOTP`,
       headers: {
         "Content-Type": "application/json",
       },

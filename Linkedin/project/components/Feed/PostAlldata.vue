@@ -16,6 +16,18 @@ const totalcomment = ref([]);
 const showallcomment = ref([]);
 const inputcomment = ref("");
 const showimg = ref("")
+const props = defineProps([
+  "usercomment",
+  "postId",
+  "list",
+  "post",
+  "text",
+  "user",
+  "allpost",
+  "editpostt",
+  "deletepost",
+  "getuserdata",
+]);
 
 
 const data = JSON.stringify({
@@ -38,18 +50,7 @@ getcommentno()
 
 TotalLikeno.value = TotalLike;
 
-  const props = defineProps([
-  "usercomment",
-  "postId",
-  "list",
-  "post",
-  "text",
-  "user",
-  "allpost",
-  "editpostt",
-  "deletepost",
-  "getuserdata",
-]);
+// --------------------------------------delet_function------------------------//
 
 const delet = ref(props.list._id === props.getuserdata._id)
 
@@ -110,11 +111,7 @@ function iscomment() {
   commentbox.value = "valid";
   showcomment(props.postId)
 }
-const iddd = ref("")
-  const kk =(e)=>{
-    iddd.value = e
-    console.log(e)
-  }
+
 
 </script>
 
@@ -257,7 +254,7 @@ const iddd = ref("")
                 type=""
                 placeholder="Add a comment..."
                 v-model="inputcomment"
-                class="bg-white w-[220px] md:w-[400px]  border-secondary border h-10 px-7 pr-10 rounded-full text-sm focus:outline-none"
+                class="bg-white w-[20px] md:w-[400px]  border-secondary border h-10 px-7 pr-10 rounded-full text-sm focus:outline-none"
               />
               <button v-if="inputcomment.trim()" class="rounded-e-full  outline-1  border-s-2    absolute right-0 font-bold border-dark  px-3 sm:px-2 p-2  ">POST</button>
             </div>
@@ -266,12 +263,14 @@ const iddd = ref("")
           </div>
         </form>
       </div>
+
+<!-- ---------------------------------Comment_Component------------------------------------ -->
+
         <div v-for="m in showallcomment ? showallcomment : ''" :key="m">
           <Comment :post="m" />
         </div>
     </div>
   </div>
-
 
 </template>
 

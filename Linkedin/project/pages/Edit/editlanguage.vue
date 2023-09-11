@@ -93,7 +93,7 @@ const router =useRouter()
      <form @submit.prevent="addskill">
       <input class="form-control border-2" placeholder="Add skill" v-model="langvalue" cols="30" rows="10"/>
         <p v-if="langerror" class="text-red-600">{{langerror}}</p>
-      <div class="py-3 flex justify-between">
+        <div class="py-3 flex justify-between">
         <button data-bs-dismiss="modal"  data-bs-toggle="modal" data-bs-target="#deletelang" class="me-1 float-right text-white rounded border-2 bg-red-600 hover:bg-red-700   px-3 py-1 border-danger font-bold">DELETE</button>
         <button v-if="langvalue.trim()" @click="saveskill(deletid)" data-bs-dismiss="modal" class="me-1 float-right text-white rounded border-2  bg-green-600 hover:bg-green-700  px-3 py-1 border-success font-bold">SAVE</button>
         <button v-else @click="saveskill()"  class="me-1 float-right text-white rounded border-2  bg-green-600 hover:bg-green-700  px-3 py-1 border-success font-bold">SAVE</button>

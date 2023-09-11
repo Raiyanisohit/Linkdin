@@ -10,8 +10,6 @@ const inputusername = reactive({ firstnamee: "", lastnamee: "" });
 const validationrouter = ref("");
 const validationerror = reactive({ firstnameerror: "", lastnameerror: "" });
 
-
-
 watchEffect(()=>{
     if(store.data.email === ""){
     router.push('/')
@@ -115,7 +113,3 @@ function handlesubmit() {
     </div>
   </div>
 </template>
-
-
-<style>
-</style>

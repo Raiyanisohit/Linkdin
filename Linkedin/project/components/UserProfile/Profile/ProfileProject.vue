@@ -135,11 +135,9 @@ async function handlesubmit(){
 
      }
 
-
      if((currentYear >= project.Endyear && project.Endmonth <= currentMonth)   && project.Endmonth != "" && enddate.value != true && project.title.trim() != "" && project.Startmonth != "" && project.Startyear != "" &&  (project.Endyear > project.Startyear ||
       (project.Startyear === project.Endyear  &&
         project.Startmonth <= project.Endmonth))){
-          console.log("second")
    
        const data = JSON.stringify({
       projectName: project.title,
@@ -249,13 +247,13 @@ function close(){
       <div class="py-2" v-for="project in post" :key="project">
         <p class="text-[17px] font-bold">{{ project.projectName }}</p>
         <p class="text-justify pe-4 pt-1">{{ project.description }}</p>
+       <a target="_blank" :href="project.projectLink"><p class="text-justify pe-4 pt-1">{{ project.projectLink }}</p></a> 
         <p v-if="!project.projectEndMonth" class="text-gray-500 text-[14px] pt-1">
           {{ project.projectStartMonth }}  {{ project.projectStartYear }} - Continue
         </p>
         <p v-else class="text-gray-500 text-[14px] pt-1">
           {{ project.projectStartMonth }}  {{ project.projectStartYear }} - {{ project.projectEndMonth }}  {{ project.projectEndYear }}
         </p>
-     
       </div>
     </div>
   </div>
