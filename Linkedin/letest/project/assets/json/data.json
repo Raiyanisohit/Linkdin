@@ -1,0 +1,36 @@
+{
+    "countries": [
+      { 
+        "id":1,
+        "country": "INDIA"
+       
+      },
+      {
+        "id":2,
+        "country": "UK"
+      },
+      {
+        "id":3,
+        "country": "Algeria"
+       
+      }
+    ],
+    "city": [
+      { 
+        "id":1,
+        "city": ["Ahmedabad", "Indor", "Delhi", "Mumbai"]
+       
+      },
+      {
+        "id":2,
+        "city": ["Bristol", "London", "LiverPool"]
+      },
+      {
+        "id":3,
+        "city": ["Adrar", "Ain Defla", "Ain Temouchent"]
+       
+      }
+    ]
+}
+
+
